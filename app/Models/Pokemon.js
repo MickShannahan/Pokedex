@@ -31,7 +31,7 @@ export default class Pokemon {
 
 
         template += ` </h5>
-            <button class="btn btn-outline-success py-3 px-4 ml-auto rounded-pill"
+            <button class="btn btn-outline-danger border-bottom border-right py-3 px-4 ml-auto rounded-pill"
             onclick="app.pokemonController.catchPokemon()">catch</button>
         `
         return template
