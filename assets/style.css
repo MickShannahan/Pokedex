@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.btn-shine{
+    text-shadow: rgb(61, 168, 255) 0px 0 15px;
+}
