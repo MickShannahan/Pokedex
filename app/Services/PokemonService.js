@@ -1,5 +1,5 @@
+import Pokemon from "../Models/Pokemon.js";
 import _store from "../store.js";
-import Pokemon from "../Models/Pokemon.js"
 
 let _pageOffset = 0;
 
@@ -11,7 +11,7 @@ const _pokeApi = axios.create({
 
 // @ts-ignore
 const _bcwApi = axios.create({
-  baseURL: "//bcw-sandbox.herokuapp.com/api/mick/",
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/mick/",
   timeout: 5000
 })
 
@@ -51,7 +51,7 @@ class PokemonService {
 
   getMyPokemon() {
     _bcwApi.get("pokemon").then(res => {
-      _store.commit("myPokemon", res.data.data.map(pokemon => new Pokemon(pokemon)))
+      _store.commit("myPokemon", res.data.map(pokemon => new Pokemon(pokemon)))
       console.log(_store.State.myPokemon)
     }).catch(err => console.error(err))
   }
